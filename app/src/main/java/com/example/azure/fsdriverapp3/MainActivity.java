@@ -12,10 +12,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    TextView txtHello;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        txtHello=(TextView)findViewById(R.id.txtHello);
     }
 
     @Override
@@ -82,16 +86,18 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            txtHello.setText("nav_camera");
         } else if (id == R.id.nav_gallery) {
+            txtHello.setText("nav_gallery");
 
         } else if (id == R.id.nav_slideshow) {
-
+            txtHello.setText("nav_slideshow");
         } else if (id == R.id.nav_manage) {
-
+            txtHello.setText("nav_manage");
         } else if (id == R.id.nav_share) {
-
+            txtHello.setText("nav_share");
         } else if (id == R.id.nav_send) {
-
+            txtHello.setText("nav_send");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
