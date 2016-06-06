@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                txtHello.setText("FloatingActionButton click");
             }
         });
 
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            txtHello.setText("action_settings");
             return true;
         }
 
